@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Panier - E-commerce</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mon Panier</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="category.html">Catégories</a></li>
+                <li><a href="account.html">Mon Compte</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Articles dans votre panier</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Produit</th>
+                    <th>Quantité</th>
+                    <th>Prix Unitaire</th>
+                    <th>Prix Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Exemple d'article dans le panier -->
+                <tr>
+                    <td>Nom du Produit 1</td>
+                    <td>
+                        <input type="number" value="1" min="1">
+                    </td>
+                    <td>€20.00</td>
+                    <td>€20.00</td>
+                    <td><button>Supprimer</button></td>
+                </tr>
+                <tr>
+                    <td>Nom du Produit 2</td>
+                    <td>
+                        <input type="number" value="2" min="1">
+                    </td>
+                    <td>€15.00</td>
+                    <td>€30.00</td>
+                    <td><button>Supprimer</button></td>
+                </tr>
+                <!-- Fin de l'exemple -->
+            </tbody>
+        </table>
+        
+        <div class="total">
+            <h3>Total: €50.00</h3>
+            <button><a href="checkout.html">Passer à la caisse</a></button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Mon E-commerce. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

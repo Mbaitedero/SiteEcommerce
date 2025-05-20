@@ -32,6 +32,21 @@ ecommerce-site
 - Gérez votre compte et consultez l'historique de vos commandes sur la page de compte.
 - Consultez la page de support pour toute question ou problème.
 
+## Guider l'utilisateur vers des catégories de produits spécifiques et populaires :
+
+- Cadeaux : C'est une catégorie transversale extrêmement populaire. 
+Ce lien  dirige directement vers une sélection de produits adaptés aux cadeaux.
+
+- La boutique de personnalisation : Met en avant des produits qui peuvent être personnalisés (gravure, broderie, design sur mesure). C'est une niche très recherchée sur les plateformes d'artisanat et de créateurs.
+
+- Trouvailles de mode : Dirige l'utilisateur vers des articles de mode (vêtements, accessoires, bijoux) qui sont mis en avant ou sont des "découvertes" uniques.
+
+## Mettre en avant des fonctionnalités ou des sections d'intérêt :
+
+- Accueil Favoris : Cela pourrait être une section où l'utilisateur (s'il est connecté) peut voir ses articles ou boutiques favorites. Ou, dans un sens plus large, cela pourrait pointer vers des collections d'articles "favoris" ou "tendances" du site.
+
+- Enregistrement : il pourrait servir à diriger les nouveaux utilisateurs vers la page d'inscription pour créer un compte.
+
 ## Contribuer
 Les contributions sont les bienvenues ! Veuillez soumettre une demande de tirage pour toute amélioration ou correction.
 

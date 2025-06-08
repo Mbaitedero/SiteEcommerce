@@ -1,0 +1,404 @@
+   
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        /* Header */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .search-container {
+            position: relative;
+            flex: 1;
+            max-width: 400px;
+            margin: 0 20px;
+        }
+        .search-container input[type=text] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            width: 100%;
+            z-index: 10;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+        .suggestions li {
+            padding: 5px;
+            cursor: pointer;
+        }
+        .suggestions li:hover {
+            background-color: #f0f0f0;
+        }
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .header-icons div {
+            position: relative;
+        }
+        .cart-count {
+            background-color: #e67e22;
+            color: #fff;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+            position: absolute;
+            top: -5px;
+            right: -10px;
+        }
+        
+        /* Nouveau style pour l'image de profil */
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .profile-image {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #e67e22;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #e67e22;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            margin: 0;
+        }
+        nav a {
+            display: block;
+            padding: 14px 20px;
+            color: #fff;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #d35400;
+        }
+        
+        /* Carousel modifié pour défilement droite->gauche */
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            margin: 20px 0;
+            height: 400px; /* Hauteur fixe pour le conteneur */
+        }
+        .carousel-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+        .carousel-item {
+            min-width: 100%;
+            position: relative;
+        }
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translateY(-50%);
+            color: #fff;
+            max-width: 500px;
+        }
+        .carousel-caption h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+        .carousel-caption p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+        }
+        .carousel-caption button {
+            background-color: #e67e22;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .carousel-caption button:hover {
+            background-color: #d35400;
+        }
+        .carousel-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .carousel-control {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.5);
+            cursor: pointer;
+        }
+        .carousel-control.active {
+            background-color: white;
+        }
+
+        /* Category Grid */
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+        .category {
+            text-align: center;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .category:hover {
+            transform: translateY(-5px);
+        }
+        .category img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .category span {
+            display: block;
+            margin-top: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Featured Products */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+            gap: 15px;
+        }
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            text-align: center;
+            width: 200px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .product img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .product-name {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .product-price {
+            color: #e67e22;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .product-price del {
+            color: #999;
+            margin-right: 5px;
+            font-weight: normal;
+        }
+        .product-rating {
+            color: #f39c12;
+            margin: 5px 0;
+        }
+        .add-cart-btn {
+            background-color: #e67e22;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 4px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        .add-cart-btn:hover {
+            background-color: #d35400;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .footer-columns {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .footer-columns > * {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+        .footer-links a {
+            color: #ddd;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #e67e22;
+        }
+        .newsletter {
+            margin-top: 10px;
+        }
+        .newsletter input[type=email] {
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            width: 70%;
+            margin-bottom: 10px;
+        }
+        .newsletter button {
+            padding: 8px 15px;
+            border: none;
+            background-color: #e67e22;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .newsletter button:hover {
+            background-color: #d35400;
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons span {
+            font-size: 24px;
+            margin-right: 15px;
+            cursor: pointer;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        .social-icons span:hover {
+            transform: translateY(-3px);
+            color: #e67e22;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .search-container {
+                max-width: 100%;
+                margin: 10px 0;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            .carousel {
+                height: 300px;
+            }
+            .carousel-caption {
+                left: 10%;
+                right: 10%;
+            }
+            .carousel-caption h2 {
+                font-size: 24px;
+            }
+            .carousel-caption p {
+                font-size: 16px;
+            }
+            .categories {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product {
+                width: 45%;
+            }
+        }
+        @media (max-width: 480px) {
+            .carousel {
+                height: 200px;
+            }
+            .carousel-caption {
+                top: 30%;
+                transform: translateY(0);
+            }
+            .carousel-caption h2 {
+                font-size: 18px;
+            }
+            .carousel-caption p {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            .carousel-caption button {
+                padding: 6px 12px;
+                font-size: 14px;
+            }
+            .product {
+                width: 100%;
+            }
+  

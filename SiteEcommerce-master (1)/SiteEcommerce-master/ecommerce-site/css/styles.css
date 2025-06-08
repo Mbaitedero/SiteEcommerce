@@ -1,0 +1,338 @@
+/* Styles généraux du body */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Police similaire à Etsy */
+    background-color: #f8f8f8; /* Fond légèrement plus clair */
+    display: flex;
+    flex-direction: column; /* Pour le footer "sticky" */
+}
+
+/* Conteneur principal pour le contenu */
+#page-wrapper {
+    flex: 1; /* Permet à ce conteneur de prendre tout l'espace vertical disponible */
+    display: flex;
+    flex-direction: column;
+    /* Important: ajoute un padding-top pour compenser le header fixe */
+    padding-top: 120px; /* Ajustez cette valeur en fonction de la hauteur totale de votre header (top-header + main-nav) */
+}
+
+/* Styles du header global */
+.etsy-header {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed; /* Le header reste en haut lors du défilement */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* S'assure que le header est au-dessus des autres éléments */
+}
+
+/* Première ligne du header (logo, recherche, user) */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px; /* Padding latéral */
+    border-bottom: 1px solid #eee; /* Ligne de séparation */
+    max-width: 1400px; /* Largeur maximale pour le contenu */
+    margin: 0 auto; /* Centrer le contenu */
+    gap: 20px; /* Espace entre les sections flex */
+}
+
+.logo-section {
+    flex-shrink: 0; /* Empêche le logo de rétrécir */
+}
+
+.logo {
+    color: #f56400; /* Couleur orange d'Etsy */
+    font-size: 2.5rem; /* Taille du logo */
+    font-family: 'Georgia', serif; /* Police de style */
+    font-weight: bold;
+    margin: 0; /* Supprime les marges par défaut du h1 */
+}
+
+.search-section {
+    flex-grow: 1; /* Permet à la section de recherche de prendre le maximum d'espace */
+    display: flex; /* Active flexbox pour centrer la barre de recherche */
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Prend toute la largeur disponible dans search-section */
+    max-width: 600px; /* Limite la largeur max de la barre de recherche */
+    border: 1px solid #666; /* Bordure sombre */
+    border-radius: 24px; /* Bords arrondis */
+    padding: 8px 15px; /* Padding interne */
+    background-color: #f8f8f8; /* Fond légèrement gris pour la barre de recherche */
+}
+
+.search-bar input {
+    flex: 1; /* L'input prend tout l'espace disponible */
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent; /* Fond transparent pour l'input */
+}
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #f56400; /* Icône de recherche orange */
+    font-size: 18px;
+    padding-left: 10px; /* Espace entre l'input et le bouton */
+}
+
+.search-button:hover {
+    opacity: 0.8;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espace entre les éléments de la section utilisateur */
+    flex-shrink: 0; /* Empêche de rétrécir */
+}
+
+.signin-link, .user-icon-link {
+    text-decoration: none;
+    color: #222; /* Couleur du texte et des icônes */
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s ease;
+}
+
+.signin-link:hover, .user-icon-link:hover {
+    color: #f56400; /* Couleur au survol */
+}
+
+.user-icon-link .fas {
+    font-size: 20px; /* Taille des icônes (cœur, panier) */
+}
+
+
+/* Deuxième ligne de navigation (main-nav) */
+.main-nav {
+    display: flex;
+    justify-content: space-between; /* Espace entre nav-left et nav-right */
+    align-items: center; /* Centrer verticalement */
+    padding: 10px 30px; /* Padding latéral */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-left {
+    display: flex;
+    gap: 25px; /* Espace entre les liens de la nav-left */
+    flex-wrap: wrap; /* Permet aux liens de passer à la ligne sur petits écrans */
+}
+
+.nav-right ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Espace entre les liens de la nav-right */
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    color: #555; /* Couleur des liens de nav */
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: #f56400;
+}
+
+/* Styles du contenu principal */
+main {
+    padding: 20px;
+    flex-grow: 1; /* Permet à main de prendre l'espace disponible */
+}
+
+/* Styles pour les sections et produits (inchangés ou adaptés) */
+section {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    text-align: center;
+    color: #e8491d;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(33.33% - 30px); /* Pour 3 produits par ligne (33.33% moins la marge totale) */
+    box-sizing: border-box; /* Inclure padding et border dans la largeur */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product h3 { /* Utilisé h3 dans l'HTML d'exemple, j'ajuste ici */
+    font-size: 1.5em;
+    color: #35424a;
+}
+
+.product p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Styles du pied de page (footer) */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #35424a;
+    color: #ffffff;
+    margin-top: auto;
+}
+
+/* ====================================
+   Responsive Design
+   ==================================== */
+
+/* Pour les écrans de taille moyenne (tablettes, > 768px et <= 1200px) */
+@media (max-width: 1200px) {
+    .top-header, .main-nav {
+        padding: 10px 20px; /* Réduit le padding latéral */
+    }
+
+    .search-bar {
+        max-width: 450px; /* Ajuste la largeur max de la barre de recherche */
+    }
+
+    .nav-left {
+        gap: 15px; /* Réduit l'espace entre les liens */
+    }
+
+    .nav-right ul {
+        gap: 10px;
+    }
+
+    .product {
+        width: calc(50% - 30px); /* Passe à 2 produits par ligne */
+    }
+}
+
+/* Pour les petits écrans (smartphones, <= 768px) */
+@media (max-width: 768px) {
+    .etsy-header {
+        position: relative; /* Le header n'est plus fixe pour ne pas cacher le contenu */
+        box-shadow: none; /* Enlève l'ombre si elle gêne sur mobile */
+    }
+
+    #page-wrapper {
+        padding-top: 0; /* Supprime le padding-top quand le header n'est plus fixe */
+    }
+
+    .top-header {
+        flex-direction: column; /* Les éléments de la première ligne s'empilent */
+        align-items: stretch; /* S'étirent sur toute la largeur */
+        padding: 10px 15px; /* Padding réduit */
+        gap: 10px; /* Réduit l'espace */
+    }
+
+    .logo-section {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .search-section {
+        width: 100%; /* Prend toute la largeur */
+    }
+
+    .search-bar {
+        max-width: none; /* Supprime la limite de largeur */
+        width: 100%; /* Prend toute la largeur disponible */
+        padding: 6px 10px; /* Réduit le padding de la barre de recherche */
+    }
+    .search-bar input {
+        font-size: 14px;
+    }
+    .search-button .fas {
+        font-size: 16px;
+    }
+
+    .user-section {
+        width: 100%;
+        justify-content: space-around; /* Distribue l'espace entre les éléments utilisateur */
+        margin-top: 10px; /* Espace au-dessus */
+        border-top: 1px solid #eee; /* Ligne de séparation pour les éléments utilisateur */
+        padding-top: 10px;
+    }
+
+    /* Masque le texte "Se connecter" sur mobile, garde juste l'icône */
+    .signin-link {
+        font-size: 0; /* Masque le texte */
+        flex-direction: column; /* Pour empiler l'icône et un éventuel texte masqué si besoin */
+        gap: 0;
+    }
+    .signin-link .fas {
+        font-size: 20px; /* S'assure que l'icône reste visible */
+    }
+
+    .main-nav {
+        flex-direction: column; /* Les deux sections de la nav (nav-left, nav-right) s'empilent */
+        padding: 10px 15px; /* Padding réduit */
+        align-items: stretch; /* S'étirent sur toute la largeur */
+    }
+
+    .nav-left, .nav-right {
+        flex-direction: column; /* Les liens s'empilent */
+        gap: 5px; /* Réduit l'espace entre les liens empilés */
+        text-align: center; /* Centre le texte des liens */
+    }
+
+    .nav-right ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .main-nav a {
+        padding: 5px 0; /* Ajoute un peu de padding vertical aux liens empilés */
+    }
+
+    .product {
+        width: calc(100% - 30px); /* 1 produit par ligne sur les très petits écrans */
+        margin: 10px auto; /* Centre le produit et réduit la marge */
+    }
+}
+
+/* Pour les très petits écrans (smartphones < 480px) */
+@media (max-width: 480px) {
+    .top-header, .main-nav {
+        padding: 10px; /* Encore moins de padding */
+    }
+
+    .user-section {
+        gap: 10px; /* Réduit encore l'espace entre les icônes */
+    }
+}

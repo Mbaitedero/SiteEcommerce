@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catégorie - E-commerce</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Produits par Catégorie</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cart.html">Panier</a></li>
+                <li><a href="account.html">Mon Compte</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="category-filter">
+            <h2>Filtrer par</h2>
+            <form>
+                <label for="sort">Trier par:</label>
+                <select id="sort" name="sort">
+                    <option value="popularity">Popularité</option>
+                    <option value="price_low_to_high">Prix: faible à élevé</option>
+                    <option value="price_high_to_low">Prix: élevé à faible</option>
+                </select>
+                <button type="submit">Appliquer</button>
+            </form>
+        </section>
+        <section class="product-list">
+            <h2>Produits Disponibles</h2>
+            <div class="product-item">
+                <a href="product.html">
+                    <img src="path/to/image.jpg" alt="Nom du produit">
+                    <h3>Nom du produit</h3>
+                    <p>Prix: 19,99 €</p>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="product.html">
+                    <img src="path/to/image.jpg" alt="Nom du produit">
+                    <h3>Nom du produit</h3>
+                    <p>Prix: 29,99 €</p>
+                </a>
+            </div>
+            <!-- Ajoutez d'autres produits ici -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 E-commerce. Tous droits réservés.</p>
+    </footer>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
